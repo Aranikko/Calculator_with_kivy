@@ -123,7 +123,7 @@ class MainWidget(GridLayout):
         if self.divide and self.value_2 >= '1':
             self.value_1 = str(self.int_value_1/int(self.value_2))
             self.divide = False
-        else:
+        if self.divide and self.value_2 == '0':
             self.value_1 = "Error"
             self.divide = False
     
